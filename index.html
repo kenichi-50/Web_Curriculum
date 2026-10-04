@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Joel S. Tinitana C. | Portafolio</title>
+
+  <style>
+
+    :root {
+      --azul: #145da0;
+      --azul-oscuro: #0b345d;
+      --azul-claro: #edf5fc;
+
+      --gris-fondo: #eef1f5;
+      --gris-suave: #f7f9fb;
+      --gris-texto: #5b6470;
+
+      --blanco: #ffffff;
+      --borde: #dce2e9;
+
+      --morado: #7154c7;
+      --verde: #16794a;
+      --dorado: #b37c00;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+      background: var(--gris-fondo);
+      color: #202936;
+
+      line-height: 1.6;
+    }
+
+
+    /* =====================================
+       NAVEGACIÓN
+    ====================================== */
+
+    nav {
+
+      width: 100%;
+
+      background: var(--azul-oscuro);
+
+      padding: 15px 20px;
+
+      display: flex;
+
+      justify-content: center;
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,.15);
+
+    }
+
+
+    nav ul {
+
+      list-style: none;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 25px;
+
+    }
+
+
+    nav a {
+
+      color: #e5effa;
+
+      text-decoration: none;
+
+      font-size: 15px;
+
+      font-weight: 600;
+
+      transition: .2s;
+
+    }
+
+
+    nav a:hover {
+
+      color: #80c4ff;
+
+    }
+
+
+
+    /* =====================================
+       CONTENEDOR PRINCIPAL
+    ====================================== */
+
+    .cv {
+
+      width: min(1100px, 94%);
+
+      margin:
+        35px auto 70px;
+
+      background: var(--blanco);
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,.12);
+
+    }
+
+
+
+    /* =====================================
+       PRESENTACIÓN
+    ====================================== */
+
+    header {
+
+      display: grid;
+
+      grid-template-columns:
+        180px 1fr;
+
+      align-items: center;
+
+      gap: 35px;
+
+      padding:
+        50px 55px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f3f8fd
+        );
+
+      border-bottom:
+        4px solid var(--azul);
+
+    }
+
+
+    .foto-perfil {
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+
+    .foto-perfil img {
+
+      width: 165px;
+      height: 165px;
+
+      object-fit: cover;
+
+      border-radius: 12px;
+
+      border:
+        4px solid #ffffff;
+
+      box-shadow:
+        0 7px 22px rgba(0,0,0,.2);
+
+    }
+
+
+    header h1 {
+
+      font-size: 38px;
+
+      line-height: 1.05;
+
+      color: var(--azul-oscuro);
+
+      margin-bottom: 10px;
+
+    }
+
+
+    header h2 {
+
+      font-size: 19px;
+
+      color: var(--azul);
+
+      margin-bottom: 18px;
+
+      font-weight: 600;
+
+    }
+
+
+    .datos-contacto {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap:
+        10px 25px;
+
+      color: var(--gris-texto);
+
+      font-size: 14px;
+
+    }
+
+
+    .datos-contacto a {
+
+      color: var(--gris-texto);
+
+      text-decoration: none;
+
+    }
+
+
+    .datos-contacto a:hover {
+
+      color: var(--azul);
+
+    }
+
+
+
+    /* =====================================
+       SECCIONES
+    ====================================== */
+
+    section {
+
+      padding:
+        38px 55px;
+
+    }
+
+
+    section + section {
+
+      border-top:
+        1px solid var(--borde);
+
+    }
+
+
+    .titulo {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-bottom: 22px;
+
+      color: var(--azul);
+
+      font-size: 25px;
+
+    }
+
+
+    .titulo::after {
+
+      content: "";
+
+      height: 2px;
+
+      flex: 1;
+
+      background:
+        linear-gradient(
+          to right,
+          var(--azul),
+          transparent
+        );
+
+    }
+
+
+    .texto {
+
+      color: var(--gris-texto);
+
+      text-align: justify;
+
+    }
+
+
+
+    /* =====================================
+       INTERESES
+    ====================================== */
+
+    .intereses {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+
+    .interes {
+
+      padding:
+        8px 15px;
+
+      border-radius: 20px;
+
+      background: var(--azul-claro);
+
+      border:
+        1px solid #c9deef;
+
+      color: var(--azul-oscuro);
+
+      font-weight: 600;
+
+      font-size: 14px;
+
+    }
+
+
+
+    /* =====================================
+       PROYECTOS
+    ====================================== */
+
+    .proyectos-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(250px, 1fr)
+        );
+
+      gap: 22px;
+
+    }
+
+
+    .proyecto {
+
+      background: white;
+
+      border:
+        1px solid var(--borde);
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      transition:
+        transform .25s,
+        box-shadow .25s;
+
+    }
+
+
+    .proyecto:hover {
+
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+    }
+
+
+    .proyecto img {
+
+      width: 100%;
+
+      height: 160px;
+
+      object-fit: cover;
+
+    }
+
+
+    .proyecto-info {
+
+      padding: 18px;
+
+    }
+
+
+    .proyecto-info h3 {
+
+      color: var(--azul-oscuro);
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .proyecto-info p {
+
+      color: var(--gris-texto);
+
+      font-size: 14px;
+
+    }
+
+
+
+    /* =====================================
+       HABILIDADES
+    ====================================== */
+
+    .habilidades {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+    }
+
+
+    .habilidad {
+
+      padding:
+        8px 15px;
+
+      border-radius: 20px;
+
+      background: #f2f6fa;
+
+      border:
+        1px solid #d5e0e9;
+
+      font-size: 14px;
+
+      color: var(--azul-oscuro);
+
+      font-weight: 600;
+
+    }
+
+
+
+    /* =====================================
+       CERTIFICADOS
+    ====================================== */
+
+    .certificados-intro {
+
+      color: var(--gris-texto);
+
+      margin-bottom: 28px;
+
+    }
+
+
+    .categoria-certificados {
+
+      margin-bottom: 38px;
+
+    }
+
+
+    .categoria-certificados h3 {
+
+      margin-bottom: 15px;
+
+      color: var(--azul-oscuro);
+
+      font-size: 19px;
+
+    }
+
+
+    /*
+        ESTA ES LA PARTE IMPORTANTE.
+
+        Permite desplazarse de izquierda
+        a derecha como en el celular.
+    */
+
+    .slider-certificados {
+
+      display: flex;
+
+      gap: 18px;
+
+      overflow-x: auto;
+
+      padding:
+        8px 3px 20px;
+
+      scroll-snap-type:
+        x mandatory;
+
+      scroll-behavior:
+        smooth;
+
+      scrollbar-width:
+        thin;
+
+      scrollbar-color:
+        var(--azul)
+        #e4e8ed;
+
+    }
+
+
+    .slider-certificados::-webkit-scrollbar {
+
+      height: 7px;
+
+    }
+
+
+    .slider-certificados::-webkit-scrollbar-track {
+
+      background: #e8edf2;
+
+      border-radius: 10px;
+
+    }
+
+
+    .slider-certificados::-webkit-scrollbar-thumb {
+
+      background: var(--azul);
+
+      border-radius: 10px;
+
+    }
+
+
+
+    .certificado {
+
+      flex:
+        0 0 270px;
+
+      min-height: 180px;
+
+      background: white;
+
+      border:
+        1px solid var(--borde);
+
+      border-radius: 10px;
+
+      padding: 20px;
+
+      scroll-snap-align:
+        start;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content:
+        space-between;
+
+      gap: 15px;
+
+      transition:
+        transform .2s,
+        box-shadow .2s;
+
+    }
+
+
+    .certificado:hover {
+
+      transform:
+        translateY(-4px);
+
+      box-shadow:
+        0 8px 20px rgba(0,0,0,.1);
+
+    }
+
+
+    .certificado h4 {
+
+      color: var(--azul-oscuro);
+
+      margin-bottom: 5px;
+
+      font-size: 17px;
+
+    }
+
+
+    .certificado p {
+
+      color: var(--gris-texto);
+
+      font-size: 13px;
+
+    }
+
+
+    .certificado .fecha {
+
+      margin-top: 5px;
+
+      font-size: 12px;
+
+      color: #7b8490;
+
+    }
+
+
+
+    /* Colores por categoría */
+
+    .curso {
+
+      border-top:
+        5px solid var(--azul);
+
+    }
+
+
+    .ciberseguridad {
+
+      border-top:
+        5px solid var(--verde);
+
+    }
+
+
+    .participacion {
+
+      border-top:
+        5px solid var(--morado);
+
+    }
+
+
+    .logro {
+
+      border-top:
+        5px solid var(--dorado);
+
+    }
+
+
+
+    /* =====================================
+       BOTÓN CERTIFICADO
+    ====================================== */
+
+    .boton-certificado {
+
+      border: none;
+
+      padding:
+        9px 15px;
+
+      border-radius: 6px;
+
+      background: var(--azul);
+
+      color: white;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: .2s;
+
+      text-decoration: none;
+
+      display: inline-block;
+
+      width: fit-content;
+
+      font-size: 13px;
+
+    }
+
+
+    .boton-certificado:hover {
+
+      background: var(--azul-oscuro);
+
+    }
+
+
+
+    /* =====================================
+       CONTACTO
+    ====================================== */
+
+    .contacto-grid {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 45px;
+
+    }
+
+
+    .contacto-item {
+
+      text-align: center;
+
+      text-decoration: none;
+
+      color: var(--azul-oscuro);
+
+      font-weight: 600;
+
+      font-size: 14px;
+
+    }
+
+
+    .contacto-item img {
+
+      display: block;
+
+      width: 55px;
+      height: 55px;
+
+      object-fit: contain;
+
+      margin:
+        0 auto 7px;
+
+      transition:
+        transform .2s;
+
+    }
+
+
+    .contacto-item:hover img {
+
+      transform:
+        scale(1.12);
+
+    }
+
+
+
+    /* =====================================
+       MODAL PDF
+    ====================================== */
+
+    .modal {
+
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 5000;
+
+      background:
+        rgba(0,0,0,.75);
+
+      padding: 25px;
+
+    }
+
+
+    .modal.activo {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .modal-contenido {
+
+      width:
+        min(1000px, 96%);
+
+      height:
+        90vh;
+
+      background: white;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .modal-header {
+
+      background:
+        var(--azul-oscuro);
+
+      color: white;
+
+      padding:
+        13px 18px;
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+    }
+
+
+    .cerrar-modal {
+
+      width: 35px;
+      height: 35px;
+
+      border: none;
+
+      border-radius: 6px;
+
+      background:
+        rgba(255,255,255,.15);
+
+      color: white;
+
+      font-size: 18px;
+
+      cursor: pointer;
+
+    }
+
+
+    .modal iframe {
+
+      flex: 1;
+
+      width: 100%;
+
+      border: none;
+
+    }
+
+
+
+    /* =====================================
+       FOOTER
+    ====================================== */
+
+    footer {
+
+      padding: 22px;
+
+      background:
+        var(--azul-oscuro);
+
+      color: #dceafa;
+
+      text-align: center;
+
+      font-size: 13px;
+
+    }
+
+
+
+    /* =====================================
+       RESPONSIVE
+    ====================================== */
+
+    @media(max-width: 760px) {
+
+      nav {
+
+        padding:
+          13px 10px;
+
+      }
+
+
+      nav ul {
+
+        gap:
+          10px 18px;
+
+      }
+
+
+      nav a {
+
+        font-size: 13px;
+
+      }
+
+
+      .cv {
+
+        width: 100%;
+
+        margin: 0;
+
+        border-radius: 0;
+
+      }
+
+
+      header {
+
+        grid-template-columns:
+          1fr;
+
+        text-align: center;
+
+        padding:
+          35px 25px;
+
+      }
+
+
+      header h1 {
+
+        font-size: 30px;
+
+      }
+
+
+      .datos-contacto {
+
+        justify-content:
+          center;
+
+      }
+
+
+      section {
+
+        padding:
+          32px 22px;
+
+      }
+
+
+      .certificado {
+
+        /*
+        Cada tarjeta ocupa casi todo
+        el ancho del celular.
+        */
+
+        flex:
+          0 0 85%;
+
+      }
+
+
+      .slider-certificados {
+
+        /*
+        Ocultamos la barra visual
+        en celular.
+
+        Se sigue deslizando con el dedo.
+        */
+
+        scrollbar-width: none;
+
+      }
+
+
+      .slider-certificados::-webkit-scrollbar {
+
+        display: none;
+
+      }
+
+
+      .modal {
+
+        padding: 5px;
+
+      }
+
+
+      .modal-contenido {
+
+        width: 100%;
+
+        height: 95vh;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     MENÚ
+====================================== -->
+
+<nav>
+
+  <ul>
+
+    <li>
+      <a href="#inicio">
+        Inicio
+      </a>
+    </li>
+
+    <li>
+      <a href="#intereses">
+        Intereses
+      </a>
+    </li>
+
+    <li>
+      <a href="#proyectos">
+        Proyectos
+      </a>
+    </li>
+
+    <li>
+      <a href="#habilidades">
+        Habilidades
+      </a>
+    </li>
+
+    <li>
+      <a href="#certificados">
+        Certificados
+      </a>
+    </li>
+
+    <li>
+      <a href="#contacto">
+        Contacto
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+
+
+
+<main class="cv">
+
+
+<!-- =====================================
+     PERFIL
+====================================== -->
+
+<header id="inicio">
+
+  <div class="foto-perfil">
+
+    <img
+      src="Foto.png"
+      alt="Joel Stalin Tinitana Carrion"
+    >
+
+  </div>
+
+
+  <div>
+
+    <h1>
+      JOEL STALIN<br>
+      TINITANA CARRION
+    </h1>
+
+
+    <h2>
+      Estudiante de Ingeniería
+      en Ciencias de la Computación
+    </h2>
+
+
+    <div class="datos-contacto">
+
+      <span>
+        📍 Quito, Ecuador
+      </span>
+
+
+      <a
+        href="mailto:joel.tinitana@epn.edu.ec"
+      >
+        ✉ joel.tinitana@epn.edu.ec
+      </a>
+
+
+      <a
+        href="https://github.com/Kenichi-50"
+        target="_blank"
+      >
+        GitHub
+      </a>
+
+
+      <a
+        href="https://www.linkedin.com/in/joel-stalin-tinitana-carri%C3%B3n-57108a196/"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================
+     PERFIL PROFESIONAL
+====================================== -->
+
+<section>
+
+  <h2 class="titulo">
+    Perfil Profesional
+  </h2>
+
+
+  <p class="texto">
+
+    Estudiante de Ingeniería en Ciencias de la
+    Computación con interés en el desarrollo de
+    software, programación, bases de datos,
+    soporte técnico y nuevas tecnologías.
+
+    Poseo capacidad de análisis, aprendizaje
+    continuo y resolución de problemas.
+
+    Me caracterizo por ser responsable,
+    organizado y comprometido con el
+    cumplimiento de objetivos.
+
+  </p>
+
+</section>
+
+
+
+<!-- =====================================
+     INTERESES
+====================================== -->
+
+<section id="intereses">
+
+  <h2 class="titulo">
+    Intereses
+  </h2>
+
+
+  <div class="intereses">
+
+    <span class="interes">
+      Bases de datos
+    </span>
+
+    <span class="interes">
+      Redes informáticas
+    </span>
+
+    <span class="interes">
+      Ciberseguridad
+    </span>
+
+    <span class="interes">
+      Inteligencia artificial
+    </span>
+
+    <span class="interes">
+      Desarrollo de software
+    </span>
+
+    <span class="interes">
+      Videojuegos
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PROYECTOS
+====================================== -->
+
+<section id="proyectos">
+
+  <h2 class="titulo">
+    Proyectos
+  </h2>
+
+
+  <div class="proyectos-grid">
+
+
+    <article class="proyecto">
+
+      <img
+        src="imagenes/inclusiondigital.jpg"
+        alt="Inclusión Digital"
+      >
+
+
+      <div class="proyecto-info">
+
+        <h3>
+          Proyecto de Inclusión Digital
+        </h3>
+
+        <p>
+
+          Participación como tutor en procesos
+          de alfabetización digital,
+          orientación y enseñanza del uso de
+          herramientas tecnológicas.
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="proyecto">
+
+      <img
+        src="imagenes/Buscamina.jpg"
+        alt="Buscaminas"
+      >
+
+
+      <div class="proyecto-info">
+
+        <h3>
+          Buscaminas en C++
+        </h3>
+
+
+        <p>
+
+          Desarrollo de una versión funcional
+          del clásico Buscaminas utilizando
+          programación orientada a objetos.
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="proyecto">
+
+      <img
+        src="imagenes/Libro.jpg"
+        alt="Biblioteca"
+      >
+
+
+      <div class="proyecto-info">
+
+        <h3>
+          Sistema de Biblioteca en Java
+        </h3>
+
+
+        <p>
+
+          Sistema para gestión de compra,
+          venta e inventario de libros.
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     HABILIDADES
+====================================== -->
+
+<section id="habilidades">
+
+  <h2 class="titulo">
+    Habilidades
+  </h2>
+
+
+  <div class="habilidades">
+
+    <span class="habilidad">
+      Python
+    </span>
+
+    <span class="habilidad">
+      Java
+    </span>
+
+    <span class="habilidad">
+      C++
+    </span>
+
+    <span class="habilidad">
+      Bases de datos
+    </span>
+
+    <span class="habilidad">
+      Redes
+    </span>
+
+    <span class="habilidad">
+      Ciberseguridad
+    </span>
+
+    <span class="habilidad">
+      Trabajo en equipo
+    </span>
+
+    <span class="habilidad">
+      Comunicación efectiva
+    </span>
+
+    <span class="habilidad">
+      Resolución de problemas
+    </span>
+
+    <span class="habilidad">
+      Pensamiento lógico
+    </span>
+
+    <span class="habilidad">
+      Adaptabilidad
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CERTIFICADOS
+====================================== -->
+
+<section id="certificados">
+
+  <h2 class="titulo">
+    Certificados
+  </h2>
+
+
+  <p class="certificados-intro">
+
+
+  </p>
+
+
+
+  <!-- =====================================
+       CURSOS
+  ====================================== -->
+
+  <div class="categoria-certificados">
+
+
+    <h3>
+      🎓 Cursos
+    </h3>
+
+
+    <div class="slider-certificados">
+
+
+      <article class="certificado curso">
+
+        <div>
+
+          <h4>
+            MATLAB Onramp
+          </h4>
+
+          <p>
+            MathWorks
+          </p>
+
+          <div class="fecha">
+            2024
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/cursos/Tinitana.Certificado.MO.pdf',
+          'MATLAB Onramp'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado curso">
+
+        <div>
+
+          <h4>
+            Machine Learning Onramp
+          </h4>
+
+          <p>
+            MathWorks
+          </p>
+
+          <div class="fecha">
+            2024
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/cursos/Tinitana.Certificado.ML.pdf',
+          'Machine Learning Onramp'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado curso">
+
+        <div>
+
+          <h4>
+            Deep Learning Onramp
+          </h4>
+
+          <p>
+            MathWorks
+          </p>
+
+          <div class="fecha">
+            2024
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/cursos/Tinitana.Certificado.DL.pdf',
+          'Deep Learning Onramp'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado curso">
+
+        <div>
+
+          <h4>
+            Fundamentos de Python 1
+          </h4>
+
+          <p>
+            Cisco Networking Academy
+          </p>
+
+          <div class="fecha">
+            2025
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/cursos/Certificado de python.pdf',
+          'Fundamentos de Python 1'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado curso">
+
+        <div>
+
+          <h4>
+            Python Fundamentals
+          </h4>
+
+          <p>
+            Certificado de finalización
+          </p>
+
+          <div class="fecha">
+            2026
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/cursos/Python Fundamentals.pdf',
+          'Python Fundamentals'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado curso">
+
+        <div>
+
+          <h4>
+            Conceptos Básicos de Hardware
+          </h4>
+
+          <p>
+            Cisco Networking Academy
+          </p>
+
+          <div class="fecha">
+            2025
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/cursos/Conceptos Básicos de hardware de computadora.pdf',
+          'Conceptos Básicos de Hardware'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================
+       CIBERSEGURIDAD
+  ====================================== -->
+
+  <div class="categoria-certificados">
+
+
+    <h3>
+      🛡️ Ciberseguridad
+    </h3>
+
+
+    <div class="slider-certificados">
+
+
+      <article class="certificado ciberseguridad">
+
+        <div>
+
+          <h4>
+            CyberMinds CTF 2025
+          </h4>
+
+          <p>
+            Competencia Capture The Flag
+          </p>
+
+          <div class="fecha">
+            2025
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/ciberseguridad/Certificado CTF Cyberminds 2025 - KaliSecure-signed-signed-signed.pdf',
+          'CyberMinds CTF 2025'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado ciberseguridad">
+
+        <div>
+
+          <h4>
+            Flag Hunters EPN CTF
+          </h4>
+
+          <p>
+            Competencia de ciberseguridad
+          </p>
+
+          <div class="fecha">
+            2026
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/ciberseguridad/Certificado de Participación Flag Hunters 2026 JT (1).pdf',
+          'Flag Hunters EPN CTF 2026'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================
+       PARTICIPACIONES
+  ====================================== -->
+
+  <div class="categoria-certificados">
+
+
+    <h3>
+      🧩 Participaciones
+    </h3>
+
+
+    <div class="slider-certificados">
+
+
+      <article class="certificado participacion">
+
+        <div>
+
+          <h4>
+            Global Game Jam 2026
+          </h4>
+
+          <p>
+            Desarrollo de videojuegos
+          </p>
+
+          <div class="fecha">
+            48 horas
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/participaciones/Certificado - Global Game Jam 2026 - Joel Tinitana.pdf',
+          'Global Game Jam 2026'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado participacion">
+
+        <div>
+
+          <h4>
+            Proyecto de Inclusión Digital
+          </h4>
+
+          <p>
+            Escuela Politécnica Nacional
+          </p>
+
+          <div class="fecha">
+            2024 - 2025
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/participaciones/Certificado de InclusionDigital.pdf',
+          'Proyecto de Inclusión Digital'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado participacion">
+
+        <div>
+
+          <h4>
+            JISIC 2026
+          </h4>
+
+          <p>
+            XIII Jornadas JISIC
+          </p>
+
+          <div class="fecha">
+            2026
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/participaciones/Joel Stalin Tinitana Carrion-JISIC.pdf',
+          'JISIC 2026'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+
+      <article class="certificado participacion">
+
+        <div>
+
+          <h4>
+            Workshop JISIC
+          </h4>
+
+          <p>
+            XIII Jornadas JISIC
+          </p>
+
+          <div class="fecha">
+            2026
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/participaciones/Tinitana Carrion Joel Stalin-WORKSHOP.pdf',
+          'Workshop JISIC 2026'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================
+       LOGROS
+  ====================================== -->
+
+  <div class="categoria-certificados">
+
+
+    <h3>
+      🏆 Logros
+    </h3>
+
+
+    <div class="slider-certificados">
+
+
+      <article class="certificado logro">
+
+        <div>
+
+          <h4>
+            Primer lugar – IEEEXtreme
+          </h4>
+
+          <p>
+            Competencia internacional de programación
+          </p>
+
+          <div class="fecha">
+            Ecuador · 2025
+          </div>
+
+        </div>
+
+
+        <button
+          class="boton-certificado"
+          onclick="abrirPDF(
+          'certificados/logros/Certificado IEEExtreme - Joel Tinitana.pdf',
+          'Primer lugar - IEEEXtreme'
+          )"
+        >
+          Ver certificado
+        </button>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================
+     CONTACTO
+====================================== -->
+
+<section id="contacto">
+
+  <h2 class="titulo">
+    Contacto
+  </h2>
+
+
+  <div class="contacto-grid">
+
+
+    <a
+      class="contacto-item"
+      href="mailto:joel.tinitana@epn.edu.ec"
+    >
+
+      <img
+        src="imagenes/outlook.jpeg"
+        alt="Correo"
+      >
+
+      Correo
+
+    </a>
+
+
+
+    <a
+      class="contacto-item"
+      href="https://github.com/Kenichi-50"
+      target="_blank"
+    >
+
+      <img
+        src="imagenes/Github.jpeg"
+        alt="GitHub"
+      >
+
+      GitHub
+
+    </a>
+
+
+
+    <a
+      class="contacto-item"
+      href="https://www.linkedin.com/in/joel-stalin-tinitana-carri%C3%B3n-57108a196/"
+      target="_blank"
+    >
+
+      <img
+        src="imagenes/Linkedin.jpeg"
+        alt="LinkedIn"
+      >
+
+      LinkedIn
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<footer>
+
+  Joel Stalin Tinitana Carrion ·
+  Ingeniería en Ciencias de la Computación
+
+</footer>
+
+
+</main>
+
+
+
+<!-- =====================================
+     VISOR DE CERTIFICADOS
+====================================== -->
+
+<div
+  class="modal"
+  id="modalPDF"
+>
+
+
+  <div
+    class="modal-contenido"
+  >
+
+
+    <div
+      class="modal-header"
+    >
+
+      <strong
+        id="tituloPDF"
+      >
+        Certificado
+      </strong>
+
+
+      <button
+        class="cerrar-modal"
+        onclick="cerrarPDF()"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <iframe
+      id="visorPDF"
+      src=""
+    ></iframe>
+
+
+  </div>
+
+
+</div>
+
+
+
+<script>
+
+  function abrirPDF(
+    archivo,
+    titulo
+  ) {
+
+    document
+      .getElementById("visorPDF")
+      .src = archivo;
+
+
+    document
+      .getElementById("tituloPDF")
+      .textContent = titulo;
+
+
+    document
+      .getElementById("modalPDF")
+      .classList
+      .add("activo");
+
+
+    document.body.style.overflow =
+      "hidden";
+
+  }
+
+
+
+  function cerrarPDF() {
+
+    document
+      .getElementById("modalPDF")
+      .classList
+      .remove("activo");
+
+
+    document
+      .getElementById("visorPDF")
+      .src = "";
+
+
+    document.body.style.overflow =
+      "auto";
+
+  }
+
+
+
+  document
+    .getElementById("modalPDF")
+    .addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === this
+        ) {
+
+          cerrarPDF();
+
+        }
+
+      }
+    );
+
+
+
+  document.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (
+        event.key === "Escape"
+      ) {
+
+        cerrarPDF();
+
+      }
+
+    }
+  );
+
+</script>
+
+
+</body>
+</html>
